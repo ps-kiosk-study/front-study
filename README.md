@@ -1,5 +1,6 @@
 ## Commit Type
 - feat : 새로운 기능 추가
+- install: 새로운 라이브러리 설치
 - fix : 버그 수정
 - hotfix : 급하게 치명적인 버그 수정
 - docs : 문서 수정
