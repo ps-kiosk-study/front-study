@@ -1,6 +1,7 @@
 import { MapIcon } from "./mebubarIcons";
 import styled from "styled-components";
 
+// 화면 맨 아래 고정된 메뉴바를 만드는 컴포넌트
 function Menubar() {
   return (
     <Wrapper>
@@ -19,11 +20,11 @@ export default Menubar;
 const Wrapper = styled.div`
   position: fixed; //화면 스크롤 여부와 관계없이 고정
   bottom: 0; //화면 맨 아래에 붙임
-  left: 0;
-  width: 100%;
+  left: 0; // 왼쪽 모서리에 붙임
+  width: 100%; //화면 가로 전체를 차지
   height: 117px;
   display: flex;
-  gap: 30%;
+  gap: 30%; // 아이콘 사이 간격 설정
   align-items: center;
   justify-content: center;
   background-color: #3d5f2d;

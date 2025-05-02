@@ -29,8 +29,8 @@ const Wrapper = styled.div`
   min-height: 100vh;
   overflow-y: auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: column; // flex 방향을 column으로 설정
+  align-items: center; // align-items: 세로 방향 정렬 (위, 가운데, 아래 등)
 `;
 
 const LogoBox = styled.div`
