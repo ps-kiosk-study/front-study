@@ -3,6 +3,7 @@ import Menubar from "./components/common/menubar";
 import { Routes, Route, Link } from "react-router-dom";
 import TestPage from "./pages/test";
 import HomePage from "./pages/home";
+import { LogoIcon } from "./components/common/logoIcon";
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       <Wrapper>
         <Link to={"/"}>
           <LogoBox>
-            <img src={"/asset/logo.png"} />
+            <LogoIcon />
           </LogoBox>
         </Link>
         <Routes>
