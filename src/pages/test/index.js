@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import Menubar from "../../components/common/menubar";
 
 function TestPage() {
   return (
@@ -12,6 +13,7 @@ function TestPage() {
           </Link>
         </ItemBox>
       </Wrapper>
+      <Menubar />
     </>
   );
 }
