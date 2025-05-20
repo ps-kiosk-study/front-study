@@ -48,4 +48,5 @@ const D_Day = styled.div`
 
 const IconBox = styled.div`
   margin: auto;
+  padding-left: 20px;
 `;

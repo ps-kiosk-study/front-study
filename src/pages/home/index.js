@@ -29,7 +29,7 @@ function HomePage() {
 export default HomePage;
 
 const Wrapper = styled.div`
-  width: 600px;
+  width: 80%;
   display: block;
 `;
 
