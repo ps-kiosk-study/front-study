@@ -7,7 +7,7 @@ function TestPage() {
     <>
       <Wrapper>
         <ItemBox>
-          <h1>2025 키오스크 만들기 스터디</h1>
+          <h1>2025 우리반 알림이 스터디</h1>
           <Link to={"/home"}>
             <MyButton>시작하기</MyButton>
           </Link>
@@ -23,6 +23,7 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: auto;
 `;
 const ItemBox = styled.div`
   margin: auto;
