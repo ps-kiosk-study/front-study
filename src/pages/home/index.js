@@ -1,20 +1,52 @@
-import ProductCard from "../../components/homepage/productCard";
+import { Link } from "react-router-dom";
+
 import styled from "styled-components";
+import { LogoIcon } from "../../components/icons/logoIcon";
+import Menubar from "../../components/common/menubar";
+import NoticeCard from "../../components/homepage/noticeCard";
 
 function HomePage() {
   return (
-    <Wrapper>
-      <ProductCard />
-    </Wrapper>
+    <>
+      <Link to={"/"}>
+        <LogoBox>
+          <LogoIcon />
+        </LogoBox>
+      </Link>
+      <Wrapper>
+        <ContentsBox>
+          <Label>우리반 공지사항</Label>
+          <NoticeCard
+            isNotice={true}
+            content={"이러쿵 저러쿵 수학 어쩌구 저쩌구 얄리얄리"}
+          />
+        </ContentsBox>
+      </Wrapper>
+      <Menubar />
+    </>
   );
 }
 export default HomePage;
 
 const Wrapper = styled.div`
+  width: 80%;
+  display: block;
+`;
+
+const ContentsBox = styled.div``;
+
+const Label = styled.div`
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* 중앙 정렬 */
-  gap: 20px; /* 카드 간 간격 */
-  max-width: 600px; /* 한 줄에 3개 정도 들어가게 제한 */
-  margin: 0 auto; /* 가운데 정렬 */
+  justify-content: flex-start;
+`;
+
+const LogoBox = styled.div`
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;

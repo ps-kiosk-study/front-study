@@ -1,17 +1,16 @@
-import { MapIcon } from "./mebubarIcons";
 import styled from "styled-components";
-
+import { SuggestionBox } from "../icons/mebubarIcons";
 // 화면 맨 아래 고정된 메뉴바를 만드는 컴포넌트
 function Menubar() {
   return (
     <Wrapper>
       <IconBox>
-        <MapIcon />
+        <SuggestionBox />
         <p>부스찾기</p>
       </IconBox>
       {/* 나머지 아이콘 만들어 보기 */}
-      <MapIcon />
-      <MapIcon />
+      <SuggestionBox />
+      <SuggestionBox />
     </Wrapper>
   );
 }
@@ -27,7 +26,9 @@ const Wrapper = styled.div`
   gap: 30%; // 아이콘 사이 간격 설정
   align-items: center;
   justify-content: center;
-  background-color: #3d5f2d;
+  background-color: #498349;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 `;
 
 const IconBox = styled.div`
