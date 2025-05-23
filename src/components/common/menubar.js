@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { SuggestionBox } from "../icons/mebubarIcons";
+import { SuggestionBox, HomeIcon } from "../icons/mebubarIcons";
 // 화면 맨 아래 고정된 메뉴바를 만드는 컴포넌트
 function Menubar() {
   return (
@@ -8,8 +8,11 @@ function Menubar() {
         <SuggestionBox />
         <p>부스찾기</p>
       </IconBox>
+      <IconBox>
+        <HomeIcon />
+        <p>홈</p>
+      </IconBox>
       {/* 나머지 아이콘 만들어 보기 */}
-      <SuggestionBox />
       <SuggestionBox />
     </Wrapper>
   );
