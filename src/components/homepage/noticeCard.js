@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import { DeleteIcon } from "../icons/homePageIcon";
 
-function NoticeCard({ content, isNotice }) {
+function NoticeCard({ content, isNotice, d_day }) {
   return (
     <>
       <Wrapper>
         <ContentsBox>
           <p>{content}</p>
-          {isNotice ? <D_Day>D-5</D_Day> : <></>}
+          {isNotice ? <D_Day>D-{d_day}</D_Day> : <></>}
         </ContentsBox>
         <IconBox>
           <DeleteIcon />
@@ -21,6 +21,7 @@ export default NoticeCard;
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  margin-bottom: 10px;
 `;
 
 const ContentsBox = styled.div`
