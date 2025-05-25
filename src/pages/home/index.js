@@ -1,11 +1,24 @@
 import { Link } from "react-router-dom";
-
 import styled from "styled-components";
 import { LogoIcon } from "../../components/icons/logoIcon";
 import Menubar from "../../components/common/menubar";
 import NoticeCard from "../../components/homepage/noticeCard";
 
 function HomePage() {
+  const noticeData = [
+    { isNotice: true, content: "1번째 공지사항 어쩌두", d_day: "10" },
+    { isNotice: true, content: "2번째 공지사항 어쩌두", d_day: "20" },
+    { isNotice: true, content: "3번째 공지사항 어쩌두", d_day: "30" },
+    { isNotice: true, content: "4번째 공지사항 어쩌두", d_day: "40" },
+  ];
+
+  const suggestionData = [
+    { isNotice: false, content: "1번째 suggestionData 어쩌두" },
+    { isNotice: false, content: "2번째 suggestionData 어쩌두" },
+    { isNotice: false, content: "3번째 suggestionData 어쩌두" },
+    { isNotice: false, content: "4번째 suggestionData 어쩌두" },
+  ];
+
   return (
     <>
       <Link to={"/"}>
@@ -13,13 +26,32 @@ function HomePage() {
           <LogoIcon />
         </LogoBox>
       </Link>
+
       <Wrapper>
         <ContentsBox>
           <Label>우리반 공지사항</Label>
-          <NoticeCard
-            isNotice={true}
-            content={"이러쿵 저러쿵 수학 어쩌구 저쩌구 얄리얄리"}
-          />
+
+          {noticeData.map((item) => {
+            return (
+              <NoticeCard
+                isNotice={item.isNotice}
+                content={item.content}
+                d_day={item.d_day}
+              />
+            );
+          })}
+        </ContentsBox>
+        <ContentsBox>
+          <Label>나의 건의함</Label>
+          {suggestionData.map((item) => {
+            return (
+              <NoticeCard
+                isNotice={item.isNotice}
+                content={item.content}
+                d_day={0}
+              />
+            );
+          })}
         </ContentsBox>
       </Wrapper>
       <Menubar />
