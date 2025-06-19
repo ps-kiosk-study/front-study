@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import TestPage from "./pages/test";
 import HomePage from "./pages/home";
 import LoginPage from "./pages/login";
+import SuggestionPage from "./pages/suggestion";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<TestPage />} />
           <Route path="/home" element={<HomePage />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/suggestion" element={<SuggestionPage />} />
         </Routes>
       </Wrapper>
     </>

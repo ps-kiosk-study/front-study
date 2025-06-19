@@ -1,12 +1,15 @@
 import styled from "styled-components";
 import { SuggestionBox, HomeIcon } from "../icons/mebubarIcons";
+import { Link } from "react-router-dom";
 // 화면 맨 아래 고정된 메뉴바를 만드는 컴포넌트
 function Menubar() {
   return (
     <Wrapper>
       <IconBox>
-        <SuggestionBox />
-        <p>부스찾기</p>
+        <Link to="/suggestion">
+          <SuggestionBox />
+        </Link>
+          <p>익명 건의함</p>
       </IconBox>
       <IconBox>
         <HomeIcon />
